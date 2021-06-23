@@ -84,6 +84,15 @@ async function run() {
                                     EmployeeArray.push(Employee);
                                     resolve("done");
                                 });
+
+                            } else if (title === "Engineer") {
+                                runInquirerEngineer().then(function({ github }) {
+                                    this.Employee = new Intern(name, id, email, github, title);
+                                    console.log(github);
+                                    EmployeeArray.push(Employee);
+                                    resolve("done");
+                                });
+
                             }
                         }
                     })
