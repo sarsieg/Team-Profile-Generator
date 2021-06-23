@@ -60,3 +60,25 @@ function runInquirerManager() {
         .prompt(promptArray);
 
 }
+
+async function run() {
+    let EmployeeArray = [];
+    const maxTimes = 4;
+    for (i = 0; i < maxTimes; i++) {
+        const promise = new Promise((resolve, reject) => {
+            runInquirer()
+                .then(function({ name, id, email, title }) {
+
+                    if (title === "Manager") {
+                        runInquirerManager().then(function({ officeNumber }) {
+                            this.Employee = new Manager(name, id, email, officeNumber, title);
+                            console.log(officeNumber);
+                            EmployeeArray.push(Employee);
+                            resolve("done");
+                        })
+                    }
+                })
+        })
+    }
+
+}
