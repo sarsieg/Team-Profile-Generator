@@ -50,7 +50,7 @@ function runInquirerEngineer() {
 }
 
 function runInquirerManager() {
-    const promptArrayn = [{
+    const promptArray = [{
         type: "input",
         message: "What is your office number?",
         name: "officeNumber"
@@ -134,5 +134,54 @@ async function run() {
             <div class="col card-header">
             <h4>${EmployeeArray[j].title}</h4>
             </div>
-            }
+            
+            <ul class="list-group list-group-flush text">
+            <li class="list-group-item">Email: ${EmployeeArray[j].email}</li>
+            <li class="list-group-item">ID: ${EmployeeArray[j].id}</li>
+            <li class="list-group-item">Email: ${displayTitle(EmployeeArray[j])}</li>
+            </ul>
+
+            </div> `;
+
         }
+        return html;
+    }
+
+    let html = `<!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <title>Document</title>
+
+            <style>
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+            }
+
+            .card {
+                margin: 15px;
+                color: lightskyblue;
+                background-color: white;
+                padding: 15px;
+                border-radius: 6px;
+            }
+
+            .col {
+                
+            }
+        </head>
+        
+        <body>
+        
+        </body>
+        
+        </html>`
