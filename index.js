@@ -176,8 +176,18 @@ async function run() {
             }
 
             .col {
-                
+                flex: 1;
+                text-align: center;
             }
+
+            .text {
+                margin: 15px;
+                color: lightskyblue;
+                background-color: black;
+                padding: 15px;
+                border-radius: 6px;
+            }
+            </style>
         </head>
         
         <body>
