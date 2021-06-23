@@ -15,4 +15,4 @@ You must first run npm install in order to install the following npm package dep
 * JavaScript
 
 ## Application
-[Example of Deployed Application video]
+[Example of Deployed Application video](https://drive.google.com/file/d/16ft1JRvruwb9J-ED4RUY6oAYZff3cVGh/view)

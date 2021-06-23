@@ -112,15 +112,15 @@ async function run() {
     function displayTitle(employee) {
         if (employee.title === "Manager") {
             console.log(employee.officeNumber);
-            return `office number: ${employee.officeNumber}`;
+            return `Office number: ${employee.officeNumber}`;
         }
 
         if (employee.title === "Engineer") {
-            return `github: ${employee.github}`;
+            return `Github: ${employee.github}`;
         }
 
         if (employee.title === "Intern") {
-            return `school: ${employee.school}`;
+            return `School: ${employee.school}`;
 
         }
 
