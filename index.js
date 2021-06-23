@@ -21,6 +21,10 @@ function runInquirer() {
         message: "What is your title?",
         choices: ["Manager", "Engineer", "Intern"],
         name: "title"
+    }, {
+        type: "input",
+        message: "What is your email?",
+        name: "email"
     }];
 
     return inquirer
@@ -62,7 +66,7 @@ function runInquirerManager() {
 }
 
 async function run() {
-    let EmployeeArray = [];
+    let employeeArray = [];
     const maxTimes = 4;
     for (i = 0; i < maxTimes; i++) {
         const promise = new Promise((resolve, reject) => {
@@ -71,25 +75,25 @@ async function run() {
 
                     if (title === "Manager") {
                         runInquirerManager().then(function({ officeNumber }) {
-                            this.Employee = new Manager(name, id, email, officeNumber, title);
+                            this.employee = new Manager(name, id, email, officeNumber, title);
                             console.log(officeNumber);
-                            EmployeeArray.push(Employee);
+                            employeeArray.push(employee);
                             resolve("done");
                         });
 
                     } else if (title === "Intern") {
                         runInquirerIntern().then(function({ school }) {
-                            this.Employee = new Intern(name, id, email, school, title);
+                            this.employee = new Intern(name, id, email, school, title);
                             console.log(school);
-                            EmployeeArray.push(Employee);
+                            employeeArray.push(employee);
                             resolve("done");
                         });
 
                     } else if (title === "Engineer") {
                         runInquirerEngineer().then(function({ github }) {
-                            this.Employee = new Intern(name, id, email, github, title);
+                            this.employee = new Engineer(name, id, email, github, title);
                             console.log(github);
-                            EmployeeArray.push(Employee);
+                            employeeArray.push(employee);
                             resolve("done");
                         });
 
@@ -105,18 +109,18 @@ async function run() {
         console.log(result);
     }
 
-    function displayTitle(Employee) {
-        if (Employee.title === "Manager") {
-            console.log(Employee.officeNumber);
-            return `office number: ${Employee.officeNumber}`;
+    function displayTitle(employee) {
+        if (employee.title === "Manager") {
+            console.log(employee.officeNumber);
+            return `office number: ${employee.officeNumber}`;
         }
 
-        if (Employee.title === "Engineer") {
-            return `github: ${Employee.github}`;
+        if (employee.title === "Engineer") {
+            return `github: ${employee.github}`;
         }
 
-        if (Employee.title === "Intern") {
-            return `school: ${Employee.school}`;
+        if (employee.title === "Intern") {
+            return `school: ${employee.school}`;
 
         }
 
@@ -125,20 +129,20 @@ async function run() {
     function getCardHtml() {
         let html = "";
         for (j = 0; j < maxTimes; j++) {
-            console.log(EmployeeArray[j])
+            console.log(employeeArray[j])
             html += `<div class="card bg-dark justify-content-center align-items-center" style="width: 18rem;">
             <div class="col card-header">
-            <h4>${EmployeeArray[j].name}</h4>
+            <h4>${employeeArray[j].name}</h4>
             </div>
 
             <div class="col card-header">
-            <h4>${EmployeeArray[j].title}</h4>
+            <h4>${employeeArray[j].title}</h4>
             </div>
             
             <ul class="list-group list-group-flush text">
-            <li class="list-group-item">Email: ${EmployeeArray[j].email}</li>
-            <li class="list-group-item">ID: ${EmployeeArray[j].id}</li>
-            <li class="list-group-item">Email: ${displayTitle(EmployeeArray[j])}</li>
+            <li class="list-group-item">Email: ${employeeArray[j].email}</li>
+            <li class="list-group-item">ID: ${employeeArray[j].id}</li>
+            <li class="list-group-item">Email: ${displayTitle(employeeArray[j])}</li>
             </ul>
 
             </div> `;
