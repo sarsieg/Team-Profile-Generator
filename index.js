@@ -140,7 +140,7 @@ async function run() {
             </div>
             
             <ul class="list-group list-group-flush text">
-            <li class="list-group-item">Email: <a href="mailto:${employeeArray[j].email}</a></li>
+            <li class="list-group-item">Email: ${employeeArray[j].email}</li>
             <li class="list-group-item">ID: ${employeeArray[j].id}</li>
             <li class="list-group-item"> ${displayTitle(employeeArray[j])}</li>
             </ul>
