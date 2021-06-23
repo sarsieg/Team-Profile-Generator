@@ -100,3 +100,22 @@ async function run() {
                     console.log(err);
                 });
         });
+
+        const result = await promise;
+        console.log(result);
+    }
+
+    function displayTitle(Employee) {
+        if (Employee.title === "Manager") {
+            console.log(Employee.officeNumber;
+                return `office number: ${Employee.officeNumber}`;
+            }
+
+            if (Employee.title === "Engineer") {
+                return `github: ${Employee.github}`;
+            }
+
+            if (Employee.title === "Intern") {
+                return `school: ${Employee.school}`;
+
+            }
