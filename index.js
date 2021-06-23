@@ -107,15 +107,32 @@ async function run() {
 
     function displayTitle(Employee) {
         if (Employee.title === "Manager") {
-            console.log(Employee.officeNumber;
-                return `office number: ${Employee.officeNumber}`;
-            }
+            console.log(Employee.officeNumber);
+            return `office number: ${Employee.officeNumber}`;
+        }
 
-            if (Employee.title === "Engineer") {
-                return `github: ${Employee.github}`;
-            }
+        if (Employee.title === "Engineer") {
+            return `github: ${Employee.github}`;
+        }
 
-            if (Employee.title === "Intern") {
-                return `school: ${Employee.school}`;
+        if (Employee.title === "Intern") {
+            return `school: ${Employee.school}`;
 
+        }
+
+    }
+
+    function getCardHtml() {
+        let html = "";
+        for (j = 0; j < maxTimes; j++) {
+            console.log(EmployeeArray[j])
+            html += `<div class="card bg-dark justify-content-center align-items-center" style="width: 18rem;"
+            <div class="col card-header">
+            <h4>${EmployeeArray[j].name}</h4>
+            </div>
+
+            <div class="col card-header">
+            <h4>${EmployeeArray[j].title}</h4>
+            </div>
             }
+        }
