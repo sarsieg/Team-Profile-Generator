@@ -48,3 +48,15 @@ function runInquirerEngineer() {
     return inquirer
         .prompt(promptArray);
 }
+
+function runInquirerManager() {
+    const promptArrayn = [{
+        type: "input",
+        message: "What is your office number?",
+        name: "officeNumber"
+    }];
+
+    return inquirer
+        .prompt(promptArray);
+
+}
