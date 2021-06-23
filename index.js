@@ -191,7 +191,30 @@ async function run() {
         </head>
         
         <body>
+        <nav class="navbar navbar-dark bg-dark justify-content-center align-items-center<">
+        <span class="navbar-brand mb-0 h1">
+        <h1>My Team</h1>
+        </span>
+        </nav>
+        <div class="row">
+
+        ${getCardHtml()}
+
+        </div>
+
         
         </body>
         
-        </html>`
+        </html>
+        `;
+
+    console.log(html);
+    const fs = require("fs");
+    fs.writeFile('newFile.html', html, function(err) {
+        if (err) throw err;
+        console.log('File is created successfully!');
+
+    });
+
+}
+run()
