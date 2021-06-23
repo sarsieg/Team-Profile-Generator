@@ -23,5 +23,6 @@ function runInquirer() {
         name: "title"
     }];
 
-
+    return inquirer
+        .prompt(promptArray);
 }
