@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sarsieg/Team-Profile-Generator/issues"
   },
-  "homepage": "https://github.com/sarsieg/Team-Profile-Generator#readme"
+  "homepage": "https://github.com/sarsieg/Team-Profile-Generator#readme",
+  "dependencies": {
+    "jest": "^27.0.5"
+  }
 }
