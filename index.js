@@ -126,7 +126,7 @@ async function run() {
         let html = "";
         for (j = 0; j < maxTimes; j++) {
             console.log(EmployeeArray[j])
-            html += `<div class="card bg-dark justify-content-center align-items-center" style="width: 18rem;"
+            html += `<div class="card bg-dark justify-content-center align-items-center" style="width: 18rem;">
             <div class="col card-header">
             <h4>${EmployeeArray[j].name}</h4>
             </div>
@@ -191,7 +191,7 @@ async function run() {
         </head>
         
         <body>
-        <nav class="navbar navbar-dark bg-dark justify-content-center align-items-center<">
+        <nav class="navbar navbar-dark bg-dark justify-content-center align-items-center">
         <span class="navbar-brand mb-0 h1">
         <h1>My Team</h1>
         </span>
