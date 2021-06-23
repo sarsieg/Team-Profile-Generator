@@ -26,3 +26,25 @@ function runInquirer() {
     return inquirer
         .prompt(promptArray);
 }
+
+function runInquirerIntern() {
+    const promptArray = [{
+        type: "input",
+        message: "What school did you go to?",
+        name: "school"
+    }];
+
+    return inquirer
+        .prompt(promptArray);
+}
+
+function runInquirerEngineer() {
+    const promptArray = [{
+        type: "input",
+        message: "What is your GitHub?",
+        name: "github"
+    }];
+
+    return inquirer
+        .prompt(promptArray);
+}
